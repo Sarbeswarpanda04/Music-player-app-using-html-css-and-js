@@ -25,9 +25,9 @@ body{
   overflow: hidden;
   position: relative;
   border-radius: 15px;
-  /* background: linear-gradient(45deg, #6a11cb, #2575fc); */
+  /* background: linear-gradient(45deg, #6a11cb, #2575fc);  */
   background: linear-gradient(#4fc2f0 0%, #6903ee 90%);
-  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.342);
+  box-shadow: 0px 6px 15px #00000057;
    background-blend-mode: screen;
 }
 .container i{
@@ -129,7 +129,7 @@ body{
   color: #ffffff;
 }
 .controls{
-  margin: 70px 0 5px 0;
+  margin: 7px 0 5px 0;
 }
 .controls i{
   font-size: 28px;
@@ -216,7 +216,7 @@ body{
   /* background:
   linear-gradient(rgba(255, 255, 255, 0.973), transparent),
   linear-gradient(to top left, rgb(255, 23, 23), transparent),
-  linear-gradient(to top right, rgb(0, 183, 255), transparent); */
+  linear-gradient(to top right, rgb(0, 183, 255), transparent);  */
   background-blend-mode: screen;
   transition: all 0.15s ease-in-out;
 }
@@ -278,4 +278,19 @@ ul li .audio-duration{
 ul li.playing{
   pointer-events: none;
   color: #ffd9f2;
+}
+
+.volume-control {
+  margin-top: 15px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+#volume {
+  width: 80%;
+  margin-top: 5px;
+}
+
+#volume::-webkit-slider-thumb {
+  background: #ffffff;
 }
