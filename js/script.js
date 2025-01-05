@@ -1,5 +1,5 @@
-// Coding With Nick
-// Add Tags And Elements
+// Developed By :- Sarbeswar Panda
+// Date :- 05/01/2025
 
 const container = document.querySelector(".container"),
     musicImg = container.querySelector(".img-area img"),
@@ -264,3 +264,27 @@ function clicked(element){
     playingSong();
    
 }
+
+
+// Wait for the DOM to fully load
+document.addEventListener("DOMContentLoaded", () => {
+    // Select the audio player and volume slider
+    const audioPlayer = document.querySelector("audio"); // Ensure the audio tag is present
+    const volumeSlider = document.getElementById("volume"); // Ensure the slider has this ID
+
+    // Set initial volume to match the slider's default value
+    if (audioPlayer && volumeSlider) {
+        audioPlayer.volume = volumeSlider.value; // Initialize audio volume
+
+        // Add event listener to the volume slider
+        volumeSlider.addEventListener("input", () => {
+            audioPlayer.volume = volumeSlider.value; // Adjust audio volume
+            console.log(`Volume adjusted to: ${audioPlayer.volume}`); // Debugging log
+        });
+    } else {
+        console.error("Audio player or volume slider not found in the DOM.");
+    }
+});
+
+
+// Devloped By :- Sarbeswar Panda
